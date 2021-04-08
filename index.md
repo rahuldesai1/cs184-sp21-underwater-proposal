@@ -1,37 +1,59 @@
-## Welcome to GitHub Pages
+## Overview
+In this project we are hoping to render various optical effects caused by light reflecting, refracting, and scattering through water. These effects include shafts of light, caustics on the physical objects within the water, and light scattering caused by particles within the water. 
 
-You can use the [editor on GitHub](https://github.com/rahuldesai1/cs184-sp21-underwater-proposal/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Team 
+- Anthony Patitucci (3032735123, apatitucci1@berkeley.edu, anthonypat)
+- Charlie Zhang (3032647334, eucbital@berkeley.edu, chfzhang)
+- Dani Swords (3032906658, daniswords@berkeley.edu, daniswords)
+- Rahul Desai (3033650897, rahuldesai@berkeley.edu, rahuldesai1)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Problem Description 
+We want to solve the problem of realistically simulating the physical effects of water on light when rendering underwater scenes. The ability to render underwater scenes is essential for movies or games because it is important to accurately simulate the lighting conditions so that objects appear convincing to the viewer. It is challenging because light can scatter randomly as it hits water particles and we have to be able to model that accurately and efficiently. In games it is essential that this rendering can occur in real-time while still looking realistic. 
+Our final project will be based off of the skeleton code of project 3-2. We will treat the water as its own material and model the way light reflects and refracts off the water when it enters/exits using physics. We also plan on modifying the path tracing algorithm to simulate the scattering/absorption of light as it travels through the water if we have time. 
 
-### Markdown
+## Goals and Deliverables
+Our primary goal is to model caustics, which are the result of light rays reflecting and refracting from a curved surface. Ideally, by the end of the project, we will be able to render something that looks similar to this:
+![Underwater Scene](./images/example.png)
+- Source: http://graphics.cs.ucf.edu/old/caustics/caustics.pdf
+ 
+Our main goal is that it’s clear to any outsider who is not familiar with the class that we are modeling water based upon our rendered images. It is also important that our renderings have a reasonable runtime, comparable to what we’ve been expected to achieve in previous projects. One of our reach goals is to achieve real time rendering, and to achieve results more comparable to those we’ve found in research papers (which include more complicated underwater optical effects). 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+More concretely: 
+- We plan to deliver a few realistic renderings of underwater scenes with caustics and shafts of light. These renderings will include a scene with empty water as well as a scene with an object (such as a teapot) submerged under the water. As mentioned above, if shown to an average person, they would be able to recognize our scene as filled with water.
+- (If time permits) We hope to deliver more optimized code for real-time renderings with a graph charting performance speedups. We also hope to provide renderings with more optical effects underwater, such as changing the visibility or type of water (clear water, river water, ocean water, etc) by changing the ppm.
 
-```markdown
-Syntax highlighted code block
+We think we can accomplish these goals because we have already found several resources that will be very helpful on top of the knowledge we’ve gained from past projects.  We feel confident that we will achieve our plan, and hope that we can achieve our extra ideas if time permits.
 
-# Header 1
-## Header 2
-### Header 3
+## Schedule
+#### Week 1: (Research Phase)
+- Get a better understand of the physics of various underwater optical effects
+- Survey different methods of rendering caustics underwater and choose a method to implement
+- Design Doc + Division of Labor
+ 
+#### Week 2: (Begin Coding)
+- Start writing code
+- Have the extra classes/skeleton code we need to add on top of the project 3 implemention
+- Hopefully be able to render some kind of scene with water that’s presentable for the check-in
+ 
+#### Week 3: (Finish Coding)
+- Finish coding and debugging
+- Start working on implementing shafts of light
+ 
+#### Week 4: (Write up and Polish)
+- Write up
+- Work on stretch goals if time permits
 
-- Bulleted
-- List
+## Resources 
+Main resources:
+- Basic plan: https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-2-rendering-water-caustics 
+- Real time: http://graphics.cs.ucf.edu/old/caustics/caustics.pdf
+- http://nishitalab.org/user/nis/cdrom/cgi/cgf.pdf
+Extra resources:
+- A brief overview of underwater rendering effects: https://visl.technion.ac.il/projects/2004s18/
+- https://www.researchgate.net/publication/4270546_A_simple_and_quick_method_for_rendering_underwater_optical_effect 
+- Volumetric Scattering Resources: (from the spec) 
+  - https://cseweb.ucsd.edu/~ravir/papers/singlescat/scattering.pdf
+  - http://luthuli.cs.uiuc.edu/~daf/courses/rendering/papers/lafortune96rendering.pdf
+  - https://www.cs.dartmouth.edu/~wjarosz/publications/dissertation/chapter4.pdf
+- https://graphics.stanford.edu/courses/cs348b-competition/cs348b-16/second_report.pdf
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rahuldesai1/cs184-sp21-underwater-proposal/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
