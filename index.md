@@ -8,8 +8,9 @@ In this project we are hoping to render various optical effects caused by light 
 - Rahul Desai (3033650897, rahuldesai@berkeley.edu, rahuldesai1)
 
 ## Problem Description 
-We want to solve the problem of realistically simulating the physical effects of water on light when rendering underwater scenes. The ability to render underwater scenes is essential for movies or games because it is important to accurately simulate the lighting conditions so that objects appear convincing to the viewer. It is challenging because light can scatter randomly as it hits water particles and we have to be able to model that accurately and efficiently. In games it is essential that this rendering can occur in real-time while still looking realistic. 
-Our final project will be based off of the skeleton code of project 3-2. We will treat the water as its own material and model the way light reflects and refracts off the water when it enters/exits using physics. We also plan on modifying the path tracing algorithm to simulate the scattering/absorption of light as it travels through the water if we have time. 
+We want to solve the problem of realistically rendering scenes involving bodies of water. Such scenes often occur in movies, games, and simulations. Accurate lighting effects are an essential part of making the water in these scenes appear convincing to the viewer. It is challenging because light can scatter or be absorbed randomly as it hits particles in the water and we have to be able to model that accurately and efficiently. In games it is essential that this rendering can occur in real-time while still looking realistic. 
+Our final project will be based off of the skeleton code of project 3-2. We will treat the water as its own material and model the way light reflects and refracts off the water when it enters/exits using physics/optics. We also plan on modifying the path tracing algorithm to simulate the scattering/absorption of light as it travels through the water. If there is time, we can attempt to write shaders for real-time rendering of water.
+
 
 ## Goals and Deliverables
 Our primary goal is to model caustics, which are the result of light rays reflecting and refracting from a curved surface. Ideally, by the end of the project, we will be able to render something that looks similar to this:
